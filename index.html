@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1911–1920 | Hành trình tìm đường cứu nước</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+  <style>
+    :root { --ink:#112634; --paper:#f5f1e8; --warm:#ded4c2; --rust:#9e3327; --gold:#c58b32; --muted:#5e6a6e; --rule:#b7afa1; }
+    * { box-sizing:border-box; }
+    html, body { margin:0; min-height:100%; background:#1a2a33; color:var(--ink); font-family:"Be Vietnam Pro", sans-serif; }
+    body { overflow:hidden; }
+    .deck { position:relative; width:100vw; height:100vh; }
+    .slide { display:none; position:absolute; inset:0; padding:clamp(24px,3vw,54px) clamp(28px,5.2vw,92px) clamp(22px,3.4vw,56px); background:var(--paper); overflow:hidden; }
+    .slide.active { display:block; }
+    .slide::before { content:""; position:absolute; inset:14px; border:1px solid rgba(158,51,39,.35); pointer-events:none; }
+    .grain { position:absolute; inset:0; pointer-events:none; opacity:.25; background-image:radial-gradient(rgba(17,38,52,.18) .55px, transparent .7px); background-size:5px 5px; mix-blend-mode:multiply; }
+    .topline { position:relative; display:flex; align-items:center; justify-content:space-between; border-top:4px solid var(--rust); padding-top:10px; font-size:clamp(10px,.9vw,14px); font-weight:700; letter-spacing:.08em; color:var(--rust); }
+    .topline .period { color:var(--muted); letter-spacing:.02em; }
+    h1, h2, p { margin:0; }
+    h1 { position:relative; font-family:"Noto Serif", Georgia, serif; max-width:840px; font-weight:500; font-size:clamp(38px,3.85vw,70px); line-height:1.06; letter-spacing:normal; word-spacing:normal; }
+    h2 { font-size:clamp(23px,2vw,35px); line-height:1.15; letter-spacing:-.03em; }
+    .kicker { position:relative; margin:clamp(14px,2vw,28px) 0 10px; color:var(--rust); font-size:clamp(12px,1vw,15px); font-weight:700; }
+    .lead { position:relative; max-width:660px; font-size:clamp(14px,1.05vw,18px); line-height:1.48; color:#31454e; }
+    .quote { position:relative; border-left:5px solid var(--gold); padding:10px 0 10px 17px; max-width:760px; font-family:"Noto Serif", Georgia, serif; font-size:clamp(17px,1.35vw,23px); line-height:1.32; letter-spacing:normal; word-spacing:normal; }
+    .slide-number { position:absolute; bottom:clamp(26px,3.2vw,53px); left:clamp(35px,6.2vw,112px); color:var(--rust); font:700 clamp(12px,1vw,16px)/1 "Be Vietnam Pro",sans-serif; }
+    .source { position:absolute; right:clamp(35px,6.2vw,112px); bottom:clamp(26px,3.2vw,53px); padding:5px 7px; background:rgba(245,241,232,.82); font-size:clamp(8px,.68vw,11px); color:#526168; text-align:right; max-width:48%; line-height:1.35; }
+    .source a { color:inherit; text-decoration:underline; text-underline-offset:2px; }
+    .photo { overflow:hidden; position:relative; background:#1d333d; }
+    .photo img { width:100%; height:100%; display:block; object-fit:cover; filter:grayscale(100%) contrast(1.08) sepia(15%); }
+    .photo::after { content:""; position:absolute; inset:0; box-shadow:inset 0 0 0 1px rgba(245,241,232,.35); pointer-events:none; }
+    .photo-label { position:absolute; left:14px; bottom:13px; z-index:1; max-width:calc(100% - 28px); color:#fffdf5; font-size:clamp(10px,.8vw,13px); font-weight:600; text-shadow:0 1px 4px #000; }
+    .year { font-family:"Noto Serif", Georgia,serif; color:var(--gold); font-size:clamp(58px,8.1vw,142px); line-height:.8; letter-spacing:-.07em; }
+
+    /* Slide 1 */
+    .s1 .hero-photo { position:absolute; right:0; top:0; width:49.5%; height:100%; }
+    .s1 .hero-photo::before { content:""; position:absolute; z-index:1; inset:0; background:linear-gradient(90deg, var(--paper) 0%, rgba(245,241,232,.05) 42%); }
+    .s1 .copy { position:relative; width:59%; padding-top:clamp(20px,2.5vw,44px); z-index:2; }
+    .s1 h1 { font-size:clamp(38px,3.8vw,70px); }
+    .s1 .route { position:relative; margin-top:clamp(15px,1.8vw,26px); padding:11px 0; width:min(670px,100%); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); display:grid; grid-template-columns:1fr auto 1fr auto 1fr; align-items:center; gap:10px; font-size:clamp(11px,.88vw,14px); font-weight:700; color:#41535a; }
+    .route i { width:28px; height:1px; background:var(--rust); display:block; }
+    .s1 .quote { margin-top:clamp(14px,1.8vw,24px); }
+
+    /* Slide 2 */
+    .s2 .layout { position:relative; display:grid; grid-template-columns:1.05fr .85fr; gap:clamp(30px,5vw,100px); padding-top:clamp(24px,3vw,45px); padding-bottom:80px; height:calc(100% - 54px); }
+    .s2 .body-copy { max-width:670px; margin-top:clamp(20px,2.3vw,35px); font-size:clamp(14px,1.17vw,19px); line-height:1.55; color:#374a52; }
+    .s2 .principles { list-style:none; padding:0; margin:clamp(18px,2.5vw,34px) 0 0; border-top:1px solid var(--rule); }
+    .s2 .principles li { border-bottom:1px solid var(--rule); display:grid; grid-template-columns:42px 1fr; gap:14px; padding:8px 0; font-size:clamp(12px,1vw,16px); line-height:1.36; }
+    .s2 .principles b { color:var(--rust); font-family:"Noto Serif",serif; font-size:23px; font-weight:500; }
+    .portrait-stack { position:relative; height:min(62vh,620px); margin-top:clamp(0px,3vw,30px); }
+    .portrait-stack .portrait { height:86%; width:79%; margin-left:auto; }
+    .portrait-stack .portrait img { object-position:52% 34%; }
+    .portrait-stack .portrait .photo-label { display:none; }
+    .portrait-stack .caption-card { position:absolute; bottom:0; left:0; width:64%; padding:18px 20px; background:var(--ink); color:var(--paper); }
+    .caption-card b { display:block; color:#e9c476; font-size:clamp(11px,.9vw,14px); margin-bottom:5px; }
+    .caption-card span { font-size:clamp(11px,.92vw,15px); line-height:1.45; }
+    .s2 .slide-number { z-index:4; bottom:18px; padding:7px 18px 7px 0; background:var(--paper); }
+
+    /* Slide 3 */
+    .s3 .title-wrap { position:relative; display:grid; grid-template-columns:1fr auto; align-items:end; gap:24px; margin-top:clamp(26px,3vw,42px); }
+    .s3 h1 { max-width:860px; font-size:clamp(36px,3.75vw,66px); }
+    .s3 .content { position:relative; display:grid; grid-template-columns:.85fr 1.15fr; gap:clamp(28px,5vw,90px); margin-top:clamp(22px,3.1vw,48px); align-items:start; }
+    .document { background:#d8d0c2; padding:10px; transform:rotate(-2deg); box-shadow:9px 11px 0 rgba(17,38,52,.14); width:min(100%,420px); }
+    .document img { display:block; width:100%; height:clamp(250px,38vh,485px); object-fit:cover; object-position:50% 5%; filter:grayscale(100%) contrast(1.07) sepia(22%); }
+    .document small { display:block; margin-top:10px; color:#526168; font-size:clamp(9px,.7vw,11px); line-height:1.35; }
+    .demands { padding-top:4px; }
+    .demands h2 { color:var(--rust); margin-bottom:13px; }
+    .demands p { max-width:650px; color:#3c4c53; font-size:clamp(13px,1.05vw,18px); line-height:1.52; }
+    .demand-grid { display:grid; grid-template-columns:1fr 1fr; gap:0 25px; margin:17px 0 21px; }
+    .demand { padding:10px 0; border-top:1px solid var(--rule); font-size:clamp(12px,.96vw,16px); line-height:1.35; font-weight:600; }
+    .s3 .quote { margin-top:20px; font-size:clamp(17px,1.43vw,24px); }
+
+    /* Slide 4 */
+    .s4 { background:var(--paper); color:var(--ink); }
+    .s4::before { border-color:rgba(158,51,39,.35); }
+    .s4 .topline { border-color:var(--rust); color:var(--rust); }
+    .s4 h1 { max-width:38rem; font-size:clamp(38px,3.85vw,68px); }
+    .s4 .content { position:relative; display:grid; grid-template-columns:1.13fr .87fr; gap:clamp(36px,6vw,110px); margin-top:clamp(28px,3.5vw,52px); }
+    .choice-list { list-style:none; padding:0; margin:0; max-width:780px; }
+    .choice-list li { padding:12px 0 12px 47px; position:relative; border-top:1px solid var(--rule); font-size:clamp(13px,1.12vw,19px); line-height:1.38; }
+    .choice-list li::before { content:""; position:absolute; left:3px; top:19px; width:18px; height:18px; border-radius:50%; background:var(--gold); box-shadow:0 0 0 5px rgba(197,139,50,.12); }
+    .choice-list strong { color:var(--rust); }
+    .the-path { display:flex; align-items:stretch; margin-top:clamp(24px,3vw,40px); max-width:900px; }
+    .the-path span { border:1px solid var(--rule); width:31%; padding:12px; display:flex; align-items:center; font-size:clamp(10px,.8vw,14px); line-height:1.35; }
+    .the-path i { display:block; align-self:center; flex:1; min-width:16px; height:1px; background:var(--rust); }
+    .tours-photo { height:clamp(245px,38vh,440px); }
+    .tours-photo img { object-position:50% 50%; }
+    .tours-note { margin-top:12px; display:flex; gap:12px; color:#40535a; font-size:clamp(10px,.83vw,14px); line-height:1.4; }
+    .tours-note b { color:var(--rust); white-space:nowrap; }
+    .s4 .slide-number { color:var(--rust); }
+
+    /* Slide 5 */
+    .s5 .summary-layout { position:relative; display:grid; grid-template-columns:.83fr 1.17fr; gap:clamp(32px,5vw,94px); padding-top:clamp(24px,3vw,42px); height:calc(100% - 54px); }
+    .s5 h1 { max-width:710px; font-size:clamp(36px,3.55vw,64px); }
+    .s5 .summary-copy { margin-top:17px; max-width:620px; color:#3c4c53; font-size:clamp(13px,1.04vw,18px); line-height:1.5; }
+    .thought-flow { display:flex; flex-wrap:wrap; gap:8px; margin-top:clamp(22px,3vw,38px); max-width:700px; }
+    .thought-flow span { display:flex; align-items:center; min-height:48px; padding:8px 12px; border:1px solid var(--rule); font-size:clamp(10px,.82vw,14px); font-weight:600; line-height:1.25; }
+    .thought-flow i { align-self:center; width:18px; height:1px; background:var(--rust); }
+    .meaning { margin-top:20px; border-left:5px solid var(--gold); padding:5px 0 5px 15px; max-width:630px; color:#31454e; font-size:clamp(12px,.95vw,16px); line-height:1.45; }
+    .meaning b { color:var(--rust); }
+    .milestone-map { align-self:center; justify-self:end; width:min(100%,760px); display:grid; grid-template-columns:repeat(3, 1fr); grid-template-rows:repeat(3, minmax(100px, 1fr)); align-items:center; justify-items:center; gap:clamp(4px,.7vw,12px); }
+    .hex { width:100%; max-width:185px; aspect-ratio:1.13 / 1; clip-path:polygon(25% 3%,75% 3%,100% 50%,75% 97%,25% 97%,0 50%); display:flex; flex-direction:column; justify-content:center; align-items:center; padding:15px 19px; text-align:center; color:var(--ink); background:var(--warm); font-size:clamp(10px,.86vw,14px); line-height:1.28; }
+    .hex strong { display:block; color:var(--rust); font-size:clamp(13px,1.12vw,18px); margin-bottom:4px; }
+    .hex.center { grid-column:2; grid-row:2; max-width:215px; background:var(--ink); color:var(--paper); }
+    .hex.center strong { color:#edc970; font-family:"Noto Serif", Georgia,serif; font-size:clamp(19px,1.6vw,27px); font-weight:500; }
+    .hex.m1911 { grid-column:1; grid-row:2; background:#d7c4a6; }
+    .hex.m1719 { grid-column:1; grid-row:1; background:#c9d8d3; }
+    .hex.m1919 { grid-column:1; grid-row:3; background:#d9c3b4; }
+    .hex.m0720 { grid-column:3; grid-row:1; background:#b8cbd3; }
+    .hex.m1220 { grid-column:3; grid-row:3; background:#d4bf76; }
+    .s5 .source { background:transparent; }
+
+    .controls { position:fixed; z-index:10; right:20px; top:50%; transform:translateY(-50%); display:flex; flex-direction:column; gap:8px; }
+    .controls button { width:42px; height:42px; border:1px solid rgba(245,241,232,.6); background:#15333e; color:#fff; font-size:23px; cursor:pointer; transition:background .2s; }
+    .controls button:hover, .controls button:focus-visible { background:var(--rust); outline:3px solid #e9c476; outline-offset:2px; }
+    .progress { position:fixed; z-index:10; left:0; bottom:0; height:5px; background:var(--gold); transition:width .35s ease; }
+    @media (max-width:760px) { body { overflow:auto; } .deck { min-height:100vh; } .slide { min-height:100vh; overflow:auto; padding:28px 30px 75px; } .slide::before { inset:8px; } .s1 .hero-photo { opacity:.18; width:100%; } .s1 .copy { width:100%; } .s2 .layout, .s3 .content, .s4 .content, .s5 .summary-layout { grid-template-columns:1fr; gap:20px; } .s2 .layout, .s5 .summary-layout { height:auto; } .portrait-stack { height:320px; } .s3 .title-wrap { grid-template-columns:1fr; } .document { width:65%; } .tours-photo { height:240px; } .milestone-map { justify-self:center; } .source { left:30px; max-width:70%; text-align:left; } .controls { right:10px; } }
+    @media (prefers-reduced-motion:reduce) { * { transition:none !important; } }
+    @media print { .slide { display:block !important; position:relative; width:100vw; height:56.25vw; min-height:0; page-break-after:always; } .controls,.progress { display:none; } }
+  </style>
+</head>
+<body>
+  <main class="deck" aria-label="Bài thuyết trình: hành trình tìm đường cứu nước 1911–1920">
+    <section class="slide s1 active" aria-label="Slide 1: Ra đi tìm đường cứu nước">
+      <div class="grain"></div>
+      <div class="hero-photo photo"><img src="assets/nha-rong-1911.jpg" alt="Bến Nhà Rồng đầu thế kỷ 20" /><span class="photo-label">Bến Nhà Rồng — không gian khởi đầu hành trình</span></div>
+      <div class="copy">
+        <div class="topline"><span>HÀNH TRÌNH TÌM ĐƯỜNG CỨU NƯỚC</span><span class="period">1911–1918</span></div>
+        <p class="kicker">05.06.1911 · Bến Nhà Rồng</p>
+        <h1>Ra đi để tìm một con đường mới cho dân tộc</h1>
+        <p class="lead">Nguyễn Tất Thành rời Tổ quốc, đi qua nhiều châu lục, vừa lao động vừa quan sát đời sống xã hội. Những trải nghiệm ấy mở rộng nhận thức từ nỗi đau mất nước của Việt Nam tới số phận chung của các dân tộc thuộc địa.</p>
+        <div class="route"><span>Châu Á</span><i></i><span>Châu Phi</span><i></i><span>Châu Âu · Châu Mỹ</span></div>
+        <blockquote class="quote">“Năm 1911, Nguyễn Tất Thành ra đi chưa phải vì đã có sẵn câu trả lời, mà để tìm câu trả lời: Việt Nam phải đi con đường nào để giành lại độc lập?”</blockquote>
+      </div>
+      <span class="slide-number">01 / 05</span>
+      <p class="source">Ảnh tư liệu: <a href="https://baonghean.vn/chang-thanh-nien-nguyen-tat-thanh-ra-di-tim-duong-cuu-nuoc-10274409.html" target="_blank" rel="noreferrer">Báo Nghệ An</a> — Bến Nhà Rồng đầu thế kỷ XX.</p>
+    </section>
+
+    <section class="slide s2" aria-label="Slide 2: Từ quan sát đến hoạt động chính trị">
+      <div class="grain"></div>
+      <div class="topline"><span>CHUYỂN BIẾN NHẬN THỨC</span><span class="period">1917–1919</span></div>
+      <div class="layout">
+        <div>
+          <p class="kicker">Từ quan sát đến hoạt động chính trị</p>
+          <h1>Thế giới trở thành một lớp học lớn</h1>
+          <p class="body-copy">Cách mạng Tháng Mười Nga năm 1917 cho thấy nhân dân lao động và các dân tộc bị áp bức có thể tự mình đứng lên giành quyền làm chủ. Từ đây, Nguyễn Ái Quốc ngày càng quan tâm đến phong trào công nhân và tư tưởng xã hội chủ nghĩa.</p>
+          <ul class="principles">
+            <li><b>1917</b><span>Quan tâm sâu sắc đến ý nghĩa giải phóng của Cách mạng Tháng Mười Nga.</span></li>
+            <li><b>1919</b><span>Tham gia Đảng Xã hội Pháp, tiếp xúc trực tiếp với phong trào công nhân và các tư tưởng tiến bộ.</span></li>
+            <li><b>→</b><span>Từ người khảo sát thực tế, Nguyễn Ái Quốc bắt đầu trực tiếp đấu tranh chính trị.</span></li>
+          </ul>
+        </div>
+        <div class="portrait-stack">
+          <figure class="portrait photo"><img src="assets/nguyen-tat-thanh-portrait.jpg" alt="Chân dung Nguyễn Tất Thành thời trẻ" /><span class="photo-label">Nguyễn Tất Thành thời trẻ</span></figure>
+          <div class="caption-card"><b>BƯỚC NGOẶT</b><span>Nhận thức dân tộc gắn dần với vấn đề giải phóng các dân tộc bị áp bức trên thế giới.</span></div>
+        </div>
+      </div>
+      <span class="slide-number">02 / 05</span>
+      <p class="source">Ảnh tư liệu: <a href="https://tuyenquang.dcs.vn/DetailView/29869/22/Hanh-trinh-hy-vong-cua-nguoi-thanh-nien-yeu-nuoc.html" target="_blank" rel="noreferrer">Cổng TTĐT tỉnh Tuyên Quang</a>.</p>
+    </section>
+
+    <section class="slide s3" aria-label="Slide 3: Tìm kiếm lời giải cho vấn đề dân tộc">
+      <div class="grain"></div>
+      <div class="topline"><span>TÌM KIẾM LỜI GIẢI CHO VẤN ĐỀ DÂN TỘC</span><span class="period">1919 – 07.1920</span></div>
+      <div class="title-wrap"><h1>Một tiếng nói Việt Nam tại Versailles</h1><div class="year">1919</div></div>
+      <div class="content">
+        <figure class="document"><img src="assets/nguyen-ai-quoc-id-1919.jpg" alt="Thẻ căn cước Nguyễn Ái Quốc cấp năm 1919" /><small>Thẻ căn cước mang tên “Nguyên Ai Quâc”, cấp tại Pháp ngày 04.09.1919.</small></figure>
+        <div class="demands">
+          <h2>“Yêu sách của nhân dân An Nam”</h2>
+          <p>Ngày 18.06.1919, Nguyễn Ái Quốc thay mặt người Việt Nam yêu nước tại Pháp gửi bản yêu sách 8 điểm tới Hội nghị Versailles, đòi các quyền dân chủ cơ bản.</p>
+          <div class="demand-grid">
+            <div class="demand">Tự do báo chí, ngôn luận</div><div class="demand">Tự do hội họp, lập hội</div>
+            <div class="demand">Bình đẳng trước pháp luật</div><div class="demand">Cải cách pháp lý &amp; giáo dục</div>
+          </div>
+          <p><b>Thực tế:</b> các cường quốc không chấp nhận yêu cầu. Từ đó, Người càng nhận rõ dân tộc bị áp bức không thể trông chờ vào sự ban phát tự do của thực dân.</p>
+          <blockquote class="quote">Tháng 7.1920, Luận cương của Lênin mở ra một lời giải rõ ràng hơn cho vấn đề giải phóng dân tộc.</blockquote>
+        </div>
+      </div>
+      <span class="slide-number">03 / 05</span>
+      <p class="source">Ảnh tư liệu: <a href="https://commons.wikimedia.org/wiki/File:Th%E1%BA%BB_c%C4%83n_c%C6%B0%E1%BB%9Bc_Nguy%E1%BB%85n_%C3%81i_Qu%E1%BA%A5c_(%E9%98%AE%E6%84%9B%E5%9C%8B)_-_Ng%C3%A0y_b%E1%BB%91n_th%C3%A1ng_ch%C3%ADn_n%C4%83m_1919.jpg" target="_blank" rel="noreferrer">Wikimedia Commons</a> — tư liệu năm 1919.</p>
+    </section>
+
+    <section class="slide s4" aria-label="Slide 4: Lựa chọn con đường cách mạng vô sản">
+      <div class="grain"></div>
+      <div class="topline"><span>ĐẠI HỘI TOURS · LỰA CHỌN LỊCH SỬ</span><span class="period">12.1920</span></div>
+      <div class="content">
+        <div>
+          <h1>Lựa chọn con đường cách mạng vô sản</h1>
+          <ul class="choice-list">
+            <li>Ủng hộ việc gia nhập <strong>Quốc tế Cộng sản</strong>.</li>
+            <li>Bỏ phiếu đứng về phía những người cộng sản; tham gia quá trình thành lập <strong>Đảng Cộng sản Pháp</strong>.</li>
+            <li>Tiếp tục đấu tranh cho quyền lợi các dân tộc thuộc địa.</li>
+          </ul>
+          <div class="the-path" aria-label="Tiến trình chuyển biến tư tưởng"><span>Chủ nghĩa yêu nước</span><i></i><span>Tiếp xúc phong trào công nhân &amp; chủ nghĩa xã hội</span><i></i><span>Chủ nghĩa Mác – Lênin</span><i></i><span>Lựa chọn cách mạng vô sản</span></div>
+        </div>
+        <div>
+          <figure class="tours-photo photo"><img src="assets/congres-tours-1920.jpg" alt="Toàn cảnh hội trường Đại hội Tours năm 1920" /><span class="photo-label">Đại hội Tours, tháng 12.1920</span></figure>
+          <p class="tours-note"><b>Ý nghĩa</b><span>Gần mười năm tìm tòi và khảo nghiệm đã dẫn tới nhận thức: giải phóng dân tộc Việt Nam phải gắn với cách mạng vô sản và phong trào cách mạng thế giới.</span></p>
+        </div>
+      </div>
+      <span class="slide-number">04 / 05</span>
+      <p class="source">Ảnh tư liệu: <a href="https://commons.wikimedia.org/wiki/File:Congr%C3%A8s_de_Tours_-_vue_g%C3%A9n%C3%A9rale_de_la_salle.jpg" target="_blank" rel="noreferrer">Wikimedia Commons / BnF Gallica</a> — ảnh công cộng, 1920.</p>
+    </section>
+
+    <section class="slide s5" aria-label="Slide 5: Tổng kết giai đoạn 1911 đến 1920">
+      <div class="grain"></div>
+      <div class="topline"><span>TỔNG KẾT GIAI ĐOẠN</span><span class="period">1911–1920</span></div>
+      <div class="summary-layout">
+        <div>
+          <p class="kicker">Gần 10 năm tìm đường cứu nước</p>
+          <h1>Từ khảo nghiệm đến một lựa chọn lịch sử</h1>
+          <p class="summary-copy">Trong gần mười năm, Nguyễn Ái Quốc từng bước chuyển biến từ lòng yêu nước và quan sát thực tế thế giới đến việc tìm thấy cơ sở lý luận cho con đường giải phóng dân tộc.</p>
+          <div class="thought-flow" aria-label="Sự chuyển biến trong tư tưởng">
+            <span>Chủ nghĩa yêu nước</span><i></i><span>Khảo nghiệm thực tiễn thế giới</span><i></i><span>Nhận thức dân tộc &amp; giai cấp</span><i></i><span>Chủ nghĩa Mác – Lênin</span><i></i><span>Cách mạng vô sản</span>
+          </div>
+          <p class="meaning"><b>Ý nghĩa.</b> Giai đoạn 1911–1920 đặt nền móng cho tư tưởng Hồ Chí Minh về giải phóng dân tộc: độc lập dân tộc gắn với phong trào cách mạng của các dân tộc bị áp bức trên thế giới.</p>
+        </div>
+        <div class="milestone-map" aria-label="Năm cột mốc nổi bật giai đoạn 1911 đến 1920">
+          <div class="hex m1719"><strong>1917–1919</strong><span>Ảnh hưởng Cách mạng Tháng Mười; tham gia Đảng Xã hội Pháp</span></div>
+          <div class="hex m0720"><strong>07.1920</strong><span>Đọc Luận cương của Lênin</span></div>
+          <div class="hex m1911"><strong>1911</strong><span>Ra đi, khảo nghiệm thực tế ở nhiều quốc gia</span></div>
+          <div class="hex center"><strong>1911–1920</strong><span>Hình thành tư tưởng cứu nước theo con đường cách mạng vô sản</span></div>
+          <div class="hex m1919"><strong>1919</strong><span>Gửi “Yêu sách của nhân dân An Nam”</span></div>
+          <div class="hex m1220"><strong>12.1920</strong><span>Đại hội Tours: lựa chọn Quốc tế Cộng sản</span></div>
+        </div>
+      </div>
+      <span class="slide-number">05 / 05</span>
+      <p class="source">Tóm tắt nội dung bài thuyết trình.</p>
+    </section>
+  </main>
+  <nav class="controls" aria-label="Điều khiển trình chiếu"><button id="prev" aria-label="Slide trước">‹</button><button id="next" aria-label="Slide sau">›</button></nav>
+  <div class="progress" aria-hidden="true"></div>
+  <script>
+    const slides = [...document.querySelectorAll('.slide')]; let current = Math.max(0, Math.min(slides.length - 1, Number(location.hash.replace('#slide-', '')) - 1 || 0));
+    const progress = document.querySelector('.progress');
+    function show(i) { current = (i + slides.length) % slides.length; slides.forEach((slide,n) => slide.classList.toggle('active', n === current)); progress.style.width = `${(current + 1) / slides.length * 100}%`; document.title = `${current + 1}/5 | 1911–1920`; history.replaceState(null, '', `#slide-${current + 1}`); }
+    document.querySelector('#prev').addEventListener('click', () => show(current - 1));
+    document.querySelector('#next').addEventListener('click', () => show(current + 1));
+    document.addEventListener('keydown', e => { if (['ArrowRight','PageDown',' '].includes(e.key)) { e.preventDefault(); show(current + 1); } if (['ArrowLeft','PageUp'].includes(e.key)) { e.preventDefault(); show(current - 1); } if (e.key === 'Home') show(0); if (e.key === 'End') show(slides.length - 1); });
+    show(0);
+  </script>
+</body>
+</html>
